@@ -1,0 +1,45 @@
+.about-section{
+    padding: 5rem 0;
+    background-color: #EDFDFF;
+    margin-top: 1px;
+
+    &__image{
+        img{
+            width: 100%;
+            border-radius: 2rem;
+        }
+    }
+    &__text{
+        margin-left: 6rem;
+        h2{
+            font-size: 4.8rem;
+            font-weight: bold;
+            color: #001F22;
+        }
+        p{
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #4E4E4E;
+            line-height: 3.1rem;
+            margin-top: 1rem;
+        }
+        ul{ 
+            padding-left: 1rem;
+            margin: 3rem 0;
+            li{
+                list-style: none;
+                font-size: 1.8rem;
+                font-weight: bold;
+                color: #001F22;
+                line-height: 3.1rem;
+                margin-bottom: 2rem;
+                &::before{
+                    content: url("../images/checkbox.png");
+                    position: relative;
+                    top: .5rem;
+                    left: -1rem;
+                }
+            }
+        } 
+    }
+}

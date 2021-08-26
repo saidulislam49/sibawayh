@@ -1,0 +1,21 @@
+
+@keyframes Iconfocus{
+    0% {
+        transform: scale(0);
+        opacity: 0; }
+      25% {
+        transform: scale(1.2);
+        opacity: .2; }
+      50% {
+        transform: scale(1.5);
+        opacity: .5; }
+      75% {
+        transform: scale(1.9);
+        opacity: .2; }
+      85% {
+        transform: scale(2);
+        opacity: 0; }
+      100% {
+        transform: scale(0);
+        opacity: 0; }
+}

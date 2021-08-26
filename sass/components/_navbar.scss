@@ -1,0 +1,45 @@
+.navbar{
+    padding-top: 3rem;
+    .navbar-brand .logo {
+        width: 80%;
+    }
+    .main_menu{
+        
+        li{
+            width: 10rem;
+            a{
+                text-decoration: none; 
+                color:#4E4E4E;
+                font-weight: 700;
+                font-size: 1.8rem;
+                line-height: 2.5rem;
+                transition: all .2s;
+                padding: 1rem;
+
+                &.active{ 
+                    color: #007C88;
+                }
+                &:hover{
+                    color: #007C88;
+                }
+            }
+        }
+    }
+    .number{
+        background-color:#007C88;
+        border-radius: 1rem;
+        padding: 1.2rem 1.6rem;
+        text-decoration: none;  
+        display: flex;
+        img{
+            width: 26px;
+        }
+        span{ 
+            color: #ffffff;
+            
+            font-weight: 600;
+            font-size: 18px;   
+        }
+    }
+    
+}
