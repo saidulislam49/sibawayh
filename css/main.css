@@ -19,8 +19,63 @@ body {
   font-family: "Nunito";
 }
 
+.burger_icon {
+  background-color: #007C88;
+  padding: 10px 0;
+  width: 31px;
+  position: relative;
+  outline: 7px solid #007c88;
+  border-radius: 0.1px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.burger_icon__top {
+  display: flex;
+  position: absolute;
+  top: 0;
+  transform: translateZ(0);
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.burger_icon__bottom {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  transform: translateZ(0);
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.burger_icon__middel {
+  display: flex;
+  position: absolute;
+  top: 41%;
+  transform: translateX(-50%);
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.burger_icon:hover .burger_icon__top,
+.burger_icon:hover .burger_icon__bottom {
+  transform: translateX(-50%);
+}
+
+.burger_icon:hover .burger_icon__middel {
+  transform: translateX(0);
+}
+
+.burger-icon-top-1,
+.burger-icon-top-2,
+.burger-icon-middel-1,
+.burger-icon-middel-2 {
+  background-color: #fff;
+  width: 30px;
+  height: 3px;
+  margin-right: 15px;
+  border-radius: 5px;
+}
+
 .header {
-  background-image: radial-gradient(farthest-corner at 1052px 412px, #FFE99C -35%, #EDFDFF 36%);
+  background-image: linear-gradient(90deg, #e1fcff 30%, #f9ffed 100%);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .header__text {
@@ -111,21 +166,40 @@ body {
 }
 .navbar .main_menu li {
   width: 10rem;
+  text-align: center;
 }
 .navbar .main_menu li a {
   text-decoration: none;
   color: #4E4E4E;
   font-weight: 700;
+  padding: 0.7rem 0;
   font-size: 1.8rem;
   line-height: 2.5rem;
   transition: all 0.2s;
-  padding: 1rem;
+  position: relative;
 }
 .navbar .main_menu li a.active {
   color: #007C88;
 }
 .navbar .main_menu li a:hover {
   color: #007C88;
+}
+.navbar .main_menu li a.active::after, .navbar .main_menu li a::after {
+  content: "";
+  position: absolute;
+  left: auto;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 4px;
+  background-color: #007C88;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+.navbar .main_menu li a.active::after, .navbar .main_menu li a:hover::after {
+  width: 100%;
+  right: auto;
+  left: 0;
 }
 .navbar .number {
   background-color: #007C88;
@@ -141,6 +215,9 @@ body {
   color: #ffffff;
   font-weight: 600;
   font-size: 18px;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: unset;
 }
 
 .btn_primary {
@@ -205,7 +282,7 @@ body {
 .about-section {
   padding: 5rem 0;
   background-color: #EDFDFF;
-  margin-top: 1px;
+  margin-top: 6rem;
 }
 .about-section__image img {
   width: 100%;
@@ -370,7 +447,7 @@ body {
   margin-bottom: 3rem;
 }
 .course-section .more_course .single_course {
-  background-color: #D1E2E5;
+  background-color: #ebfcff;
   padding: 1rem;
   border-radius: 1rem;
   text-align: center;
@@ -378,7 +455,7 @@ body {
   margin-bottom: 1.5rem;
 }
 .course-section .more_course .single_course:hover {
-  box-shadow: inset 0 0 5px;
+  box-shadow: 0 0 5px;
 }
 .course-section .more_course .single_course .single_course__image img {
   width: 100%;
@@ -397,7 +474,7 @@ body {
 .course-section .more_course .single_course .date_duration .duration::before {
   content: url("../images/duration.png");
   position: relative;
-  top: 0.5rem;
+  top: 0.8rem;
   left: -1rem;
 }
 .course-section .more_course .single_course .date_duration .date {
@@ -407,7 +484,7 @@ body {
 .course-section .more_course .single_course .date_duration .date::before {
   content: url("../images/batch.png");
   position: relative;
-  top: 0.5rem;
+  top: 0.8rem;
   left: -1rem;
 }
 .course-section .more_course .single_course h4 {
@@ -461,7 +538,7 @@ body {
   color: #4E4E4E;
 }
 .testimonial .review {
-  background-color: #D1E2E5;
+  background-color: #ebfcff;
   border-radius: 2rem;
   padding: 6rem 2.5rem;
 }
@@ -601,6 +678,16 @@ body {
     margin: 0 auto 3rem;
   }
 
+  .main_menu.navbar-nav {
+    margin-top: 2rem;
+  }
+
+  .navbar .main_menu li {
+    margin: 1rem 0;
+    width: 100%;
+    text-align: left;
+  }
+
   .course-section .section_title p {
     width: 100%;
   }
@@ -669,11 +756,21 @@ body {
   }
 
   .testimonial .review p {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     line-height: 2.5rem;
+    font-weight: 400;
   }
 }
 @media all and (max-width: 576px) {
+  .navbar {
+    padding: 2rem 0;
+    background: #d7f9fd;
+  }
+
+  .navbar .navbar-brand .mobile_logo {
+    width: 80%;
+  }
+
   .header__text {
     margin-top: 4rem;
   }
@@ -740,6 +837,15 @@ body {
   }
 }
 @media all and (max-width: 446px) {
+  .navbar {
+    padding: 1rem 0;
+  }
+
+  .navbar .main_menu li {
+    width: 100%;
+    text-align: center;
+  }
+
   .header__text {
     margin-top: 2rem;
   }
@@ -770,10 +876,6 @@ body {
   }
 }
 @media all and (max-width: 400px) {
-  .navbar {
-    padding-top: 2rem;
-  }
-
   .course-section .more_course .single_course {
     margin-left: 0;
     margin-right: 0;
@@ -781,6 +883,7 @@ body {
 
   .about-section {
     padding: 3rem 0;
+    margin-top: 2rem;
   }
 
   .testimonial .section_title h1 {

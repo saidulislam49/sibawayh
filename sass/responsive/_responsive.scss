@@ -45,6 +45,15 @@
     .header__text p { 
         margin: 0 auto 3rem;
     }
+    // navbar
+    .main_menu.navbar-nav{
+        margin-top: 2rem;
+    }
+    .navbar .main_menu li {  
+        margin: 1rem 0;
+        width: 100%; 
+        text-align: left;
+    }
     // course section
     .course-section .section_title p {
         width: 100%; 
@@ -106,12 +115,21 @@
         transform: translateX(-50%);
     }
     .testimonial .review p {
-        font-size: 1.8rem; 
+        font-size: 1.6rem; 
         line-height: 2.5rem; 
+        font-weight: 400;
     }
     
 }
 @media all and (max-width: 576px){
+    // navbar section
+    .navbar {
+        padding: 2rem 0;
+        background: #d7f9fd;
+    }
+    .navbar .navbar-brand .mobile_logo { 
+        width: 80%;
+    }
     // header section 
     .header__text {
         margin-top: 4rem;
@@ -173,6 +191,14 @@
     }
 }
 @media all and (max-width: 446px){
+    // navbar section
+    .navbar {
+        padding: 1rem 0; 
+    }
+    .navbar .main_menu li {   
+        width: 100%; 
+        text-align: center;
+    }
     // header section
     .header__text {
         margin-top: 2rem;
@@ -201,10 +227,7 @@
 }
 
 @media all and (max-width: 400px){
-    //navbar
-    .navbar {
-        padding-top: 2rem;
-    }
+    
     .course-section .more_course .single_course { 
         margin-left: 0;
         margin-right: 0;
@@ -212,6 +235,7 @@
     // about section
     .about-section {
         padding: 3rem 0; 
+        margin-top: 2rem;
     }
     // testimonial section
     .testimonial .section_title h1 { 
