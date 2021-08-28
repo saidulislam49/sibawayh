@@ -284,9 +284,16 @@ body {
   background-color: #EDFDFF;
   margin-top: 6rem;
 }
+.about-section__image {
+  overflow: hidden;
+}
 .about-section__image img {
   width: 100%;
   border-radius: 2rem;
+  transition: transform 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.about-section__image:hover img {
+  transform: scale(1.1);
 }
 .about-section__text {
   margin-left: 6rem;
@@ -346,6 +353,7 @@ body {
 }
 .course-section .course_dtails .course_dtails__image {
   position: relative;
+  overflow: hidden;
 }
 .course-section .course_dtails .course_dtails__image::after {
   content: "";
@@ -360,6 +368,10 @@ body {
 .course-section .course_dtails .course_dtails__image img {
   width: 100%;
   border-radius: 2rem;
+  transition: transform 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.course-section .course_dtails .course_dtails__image:hover img {
+  transform: scale(1.1);
 }
 .course-section .course_dtails .course_dtails__image a.venobox {
   position: absolute;
@@ -457,9 +469,16 @@ body {
 .course-section .more_course .single_course:hover {
   box-shadow: 0 0 5px;
 }
+.course-section .more_course .single_course .single_course__image {
+  overflow: hidden;
+}
 .course-section .more_course .single_course .single_course__image img {
   width: 100%;
   border-radius: 2rem;
+  transition: transform 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.course-section .more_course .single_course .single_course__image:hover img {
+  transform: scale(1.2);
 }
 .course-section .more_course .single_course .date_duration {
   display: flex;
