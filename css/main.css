@@ -76,7 +76,6 @@ body {
 
 .header {
   background-image: linear-gradient(90deg, #e1fcff 30%, #f9ffed 100%);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .header__text {
   margin-top: 10rem;
@@ -103,12 +102,19 @@ body {
   margin-bottom: 3rem;
   width: 70%;
 }
+.header__text a.btn_primary {
+  margin-bottom: 8rem;
+}
 .header__image {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 .header__image img {
-  width: 100%;
+  width: 114%;
+  position: absolute;
+  bottom: 0;
+  left: -75px;
 }
 
 .footer {
@@ -219,9 +225,12 @@ body {
 .navbar .navbar-toggler:focus {
   box-shadow: unset;
 }
+.navbar .navbar-toggler {
+  border: none;
+}
 
 .btn_primary {
-  background-image: linear-gradient(to left, #034F56, #08BBCD);
+  background-image: linear-gradient(to left, #007C88, #007C88);
   min-width: 19rem;
   min-height: 6.5rem;
   line-height: 6.5rem;
@@ -249,14 +258,12 @@ body {
   top: 0;
   left: 0;
   border-radius: 1rem;
-  opacity: 0;
-  background-image: linear-gradient(to left, #08BBCD, #034F56);
+  background-image: linear-gradient(to left, #000000, #000000);
   z-index: -1;
-  transition: all 0.3s;
+  transition: 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .btn_primary:hover::after {
   width: 100%;
-  opacity: 1;
 }
 
 .btn_secondary {
@@ -282,7 +289,7 @@ body {
 .about-section {
   padding: 5rem 0;
   background-color: #EDFDFF;
-  margin-top: 6rem;
+  margin-top: 10rem;
 }
 .about-section__image {
   overflow: hidden;
@@ -467,7 +474,7 @@ body {
   margin-bottom: 1.5rem;
 }
 .course-section .more_course .single_course:hover {
-  box-shadow: 0 0 5px;
+  box-shadow: 0 8px 10px -1px rgba(0, 0, 0, 0.3);
 }
 .course-section .more_course .single_course .single_course__image {
   overflow: hidden;
@@ -645,18 +652,6 @@ body {
     opacity: 0;
   }
 }
-@media all and (max-width: 1400px) {
-  .header__image {
-    position: relative;
-  }
-
-  .header__image img {
-    width: 114%;
-    position: absolute;
-    top: 0;
-    left: -75px;
-  }
-}
 @media all and (max-width: 1200px) {
   .header__text h2 {
     font-size: 5.2rem;
@@ -674,11 +669,12 @@ body {
   }
 }
 @media all and (max-width: 992px) {
-  .header__text {
-    text-align: center;
+  .navbar .number {
+    display: inline;
   }
-  .header__text .btn_primary {
-    margin-bottom: 2rem;
+
+  .header__text {
+    margin-top: 6rem;
   }
 
   .header__text h3 {
@@ -693,8 +689,15 @@ body {
     font-size: 5rem;
   }
 
-  .header__text p {
-    margin: 0 auto 3rem;
+  .header__image img {
+    width: 171%;
+    position: absolute;
+    bottom: 0;
+    left: -143px;
+  }
+
+  .about-section {
+    margin-top: 8rem;
   }
 
   .main_menu.navbar-nav {
@@ -721,6 +724,33 @@ body {
   }
 }
 @media all and (max-width: 768px) {
+  .navbar {
+    padding: 2rem 0;
+    background: #c1e9ed;
+  }
+
+  .header {
+    background-image: url("../images/admission-going on.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+
+  .header__text {
+    text-align: center;
+  }
+  .header__text .btn_primary {
+    margin-bottom: 2rem;
+  }
+
+  .header__text p {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 3.3rem;
+    margin: 0 auto 3rem;
+    width: 70%;
+  }
+
   .about-section__text {
     margin-left: 0;
     text-align: center;
@@ -781,11 +811,6 @@ body {
   }
 }
 @media all and (max-width: 576px) {
-  .navbar {
-    padding: 2rem 0;
-    background: #d7f9fd;
-  }
-
   .navbar .navbar-brand .mobile_logo {
     width: 80%;
   }
@@ -794,8 +819,16 @@ body {
     margin-top: 4rem;
   }
 
+  .header__text a.btn_primary {
+    margin-bottom: 6rem;
+  }
+
   .about-section__text h2 {
     font-size: 3rem;
+  }
+
+  .about-section {
+    margin-top: 6rem;
   }
 
   .course-section .section_title h1 {
@@ -813,11 +846,6 @@ body {
   .course-section .more_course h2 {
     font-size: 3rem;
     text-align: center;
-  }
-
-  .course-section .more_course .single_course {
-    margin-left: 6rem;
-    margin-right: 6rem;
   }
 
   .testimonial .section_title {
@@ -846,6 +874,26 @@ body {
     display: block !important;
   }
 
+  .course-section .more_course .single_course h4 {
+    font-size: 1.8rem;
+  }
+
+  .course-section .more_course .single_course .date_duration {
+    flex-direction: column;
+    margin: 1.5rem 0 1.5rem 1rem;
+    text-align: left;
+  }
+
+  .course-section .more_course .single_course .date_duration .duration {
+    margin-left: 0;
+  }
+
+  .btn_secondary {
+    font-size: 1.6rem;
+    min-height: 4rem;
+    line-height: 4rem;
+  }
+
   .footer__logo img {
     display: none;
   }
@@ -863,6 +911,11 @@ body {
   .navbar .main_menu li {
     width: 100%;
     text-align: center;
+  }
+
+  .nav_number {
+    text-align: center;
+    margin-bottom: 1rem;
   }
 
   .header__text {
@@ -884,6 +937,10 @@ body {
     width: 100%;
   }
 
+  .header__text a.btn_primary {
+    margin-bottom: 4rem;
+  }
+
   .footer .footer__menu ul {
     padding: 0;
   }
@@ -902,7 +959,7 @@ body {
 
   .about-section {
     padding: 3rem 0;
-    margin-top: 2rem;
+    margin-top: 4rem;
   }
 
   .testimonial .section_title h1 {
@@ -911,6 +968,10 @@ body {
   }
 }
 @media all and (max-width: 360px) {
+  .header__text a.btn_primary {
+    margin-bottom: 3rem;
+  }
+
   .footer {
     padding: 2rem;
   }

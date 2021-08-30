@@ -1,12 +1,8 @@
 @media all and (max-width: 1400px){
     .header__image { 
-        position: relative;
+       
     }
     .header__image img {
-        width: 114%;
-        position: absolute;
-        top: 0;
-        left: -75px;
     }
 }
 @media all and (max-width: 1200px){
@@ -24,14 +20,13 @@
     }
 }
 @media all and (max-width: 992px){
-
-     // header text
-     .header__text { 
-        text-align: center;
-
-        .btn_primary { 
-            margin-bottom: 2rem;
-        }
+    // navbar section
+    .navbar .number { 
+        display: inline;
+    }
+    // header text 
+    .header__text {
+        margin-top: 6rem;
     }
      .header__text h3 { 
         font-size: 2.6rem; 
@@ -41,9 +36,16 @@
     }
     .header__text h2 span {
         font-size: 5rem;
+    } 
+    .header__image img {
+        width: 171%;
+        position: absolute;
+        bottom: 0;
+        left: -143px;
     }
-    .header__text p { 
-        margin: 0 auto 3rem;
+    // about section
+    .about-section { 
+        margin-top: 8rem;
     }
     // navbar
     .main_menu.navbar-nav{
@@ -69,6 +71,31 @@
     }
 }
 @media all and (max-width: 768px){
+    // navbar section
+    .navbar {
+        padding: 2rem 0;
+        background: #c1e9ed;
+    }
+    // header section
+    .header {
+        background-image: url('../images/admission-going on.jpg'); 
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+    .header__text { 
+        text-align: center; 
+        .btn_primary { 
+            margin-bottom: 2rem;
+        }
+    }
+    .header__text p {
+        font-size: 1.8rem;
+        font-weight: 600;
+        line-height: 3.3rem;
+        margin: 0 auto 3rem;
+        width: 70%;
+    }
    
     // about section
     .about-section__text {
@@ -122,11 +149,7 @@
     
 }
 @media all and (max-width: 576px){
-    // navbar section
-    .navbar {
-        padding: 2rem 0;
-        background: #d7f9fd;
-    }
+    // navbar section 
     .navbar .navbar-brand .mobile_logo { 
         width: 80%;
     }
@@ -134,9 +157,15 @@
     .header__text {
         margin-top: 4rem;
     }
+    .header__text a.btn_primary {
+        margin-bottom: 6rem;
+    }
     // about section
     .about-section__text h2 {
         font-size: 3rem; 
+    }
+    .about-section {
+        margin-top: 6rem;
     }
     // course section
     .course-section .section_title h1 {
@@ -151,11 +180,7 @@
     .course-section .more_course h2 {
         font-size: 3rem; 
         text-align: center;
-    }
-    .course-section .more_course .single_course { 
-        margin-left: 6rem;
-        margin-right: 6rem;
-    }
+    } 
 
     // testimonial section
     .testimonial .section_title {
@@ -181,6 +206,24 @@
     .navbar .navbar-brand .mobile_logo{ 
         display: block !important;
     }
+    // course section
+    .course-section .more_course .single_course h4 {
+        font-size: 1.8rem; 
+    }
+    .course-section .more_course .single_course .date_duration { 
+        flex-direction: column; 
+        margin: 1.5rem 0 1.5rem 1rem;
+        text-align: left;
+    }
+    .course-section .more_course .single_course .date_duration .duration { 
+        margin-left: 0;
+    }
+    // btn secondary
+    .btn_secondary { 
+        font-size: 1.6rem; 
+        min-height: 4rem;
+        line-height: 4rem;  
+    }
     // footer logo
     .footer__logo img {
         display: none;
@@ -199,6 +242,10 @@
         width: 100%; 
         text-align: center;
     }
+    .nav_number {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
     // header section
     .header__text {
         margin-top: 2rem;
@@ -214,6 +261,9 @@
         font-size: 1.6rem; 
         line-height: 2.5rem; 
         width: 100%;
+    }
+    .header__text a.btn_primary {
+        margin-bottom: 4rem;
     }
     //footer
     .footer .footer__menu ul {
@@ -235,7 +285,7 @@
     // about section
     .about-section {
         padding: 3rem 0; 
-        margin-top: 2rem;
+        margin-top: 4rem;
     }
     // testimonial section
     .testimonial .section_title h1 { 
@@ -245,6 +295,10 @@
 }
 
 @media all and (max-width: 360px){
+    // header section
+    .header__text a.btn_primary {
+        margin-bottom: 3rem;
+    }
     //footer section
     .footer {
         padding: 2rem;
